@@ -1,0 +1,11 @@
+.stack{
+    display: flex;
+}
+.about-img{
+    width:500px;
+    height :500px;
+}
+.midContainer{
+    display: flex;
+    flex-direction: row;
+}
