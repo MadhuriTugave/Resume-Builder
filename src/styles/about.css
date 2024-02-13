@@ -2,8 +2,13 @@
     display: flex;
 }
 .about-img{
-    width:500px;
-    height :500px;
+    width:480px;
+    height :400px;
+   
+}
+.empty-img{
+    width:400px;
+    height :350px;
 }
 .midContainer{
     display: flex;

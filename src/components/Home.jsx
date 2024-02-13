@@ -1,17 +1,14 @@
 import React from 'react'
-import Navbar from './Navbar'
-import "../styles/homepage.css";
+import image from "../images/resume.jpg"
+import"../styles/homepage.css"
+
 import { Stack, Typography } from '@mui/material';
 const Home = () => {
   return (
-    <div>
-      <div className='Home top'>
-        {/* <div> <Navbar active={"Resume Templates"}/></div> */}
+    <div className='Home'>
     
       <div className='homepage'>
-     
-    
-     <Typography
+      <Typography
       sx={{
               fontSize: {
                 xs: "13px",
@@ -21,10 +18,9 @@ const Home = () => {
               },
            textAlign: "justify",
               padding:"10px",
-              marginTop:"55px",
-             
-            }}>
-              <h1 className='h1'>The Ultimate Resume Builder</h1>
+             }}
+            >
+              <h2 className='h1'>The Ultimate Resume Builder</h2>
      Build beautiful, recruiter-tested resumes in a few clicks! Our resume builder 
 is powerful and easy to use, with a range of amazing functions. Custom-tailor
  resumes for any job within minutes.Increase your interview chances and rise 
@@ -33,15 +29,21 @@ is powerful and easy to use, with a range of amazing functions. Custom-tailor
 
       </div>
       <Stack>
-            <img className="about-img"
-             
-              // src={image}
-              alt="img"
-            />
+      <img className="empty-img"
+            Item
+             style={{
+              maxWidth:" 100%",
+              height: "auto",
+              padding: "0",
+              margin:"0"
+          }}
+             src={image}
+             alt="img"
+           ></img>
           </Stack>
       
     </div>
-    </div>
+   
   )
 }
 
