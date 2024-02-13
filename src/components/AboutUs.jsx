@@ -11,10 +11,10 @@ import image  from  '../images/resume.jpg';
 import "../styles/about.css";
 
 
-function About() {
+function AboutUs() {
   return (
     <>
-      {/* <Navbar/> */}
+      <Navbar/>
      
         <Stack p={{ xs: "15px", sm: "25px", md: "40px", lg: "60px " }} className=''>
         {/* <h2 className="template-header-title">Resume Builder</h2> */}
@@ -45,7 +45,7 @@ function About() {
                 lg: "25px",
               },
               textAlign: "justify",
-              padding:"10px"
+              // padding:"10px"
             }}>
             Welcome to our resume builder! We are a team of experienced professionals dedicated to helping job seekers create resumes and cover letters that stand out from the competition. Our mission is to provide you with the tools and resources you need to land your dream job.
 
@@ -106,4 +106,4 @@ function About() {
   )
 }
 
-export default About
+export default AboutUs
