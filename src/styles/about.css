@@ -1,16 +1,18 @@
-.stack{
-    display: flex;
-}
+
 .about-img{
-    width:480px;
-    height :400px;
+   width: 400px;
+   /* max-width:"100%"; */
+    height:auto;
+    padding: 0;
+    margin: 0;
+    
    
 }
 .empty-img{
     width:400px;
     height :350px;
 }
-.midContainer{
-    display: flex;
-    flex-direction: row;
+.stack{
+   margin: 10px;
 }
+
