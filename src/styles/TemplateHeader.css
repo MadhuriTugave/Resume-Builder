@@ -1,5 +1,6 @@
 .template-header {
     width: 100%;
+   
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -11,6 +12,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+  }
+  .email{
+    margin-top: 2px;
   }
   
   .template-img-cont {
@@ -46,19 +50,23 @@
     font-size: 30px;
     font-weight: 600;
     line-height: 30px;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
   }
   
   .template-user-designation {
+    margin-top: 2px;
     font-size: 15px;
     font-weight: 600;
   }
   
   .template-header-second {
-    width: 20%;
-    text-align: left;
-    font-size: 11px;
+  
+    /* width: 15%; */
+    text-align: right;
+    font-size:14px;
+  
   }
+ 
   
   .template-user-about {
     font-size: 12px;
@@ -75,5 +83,18 @@
     }
     .template-img-cont {
       width: 30%;
+    }
+  }
+  
+  @media screen and (max-width: 300px) {
+    .template-user-name {
+      font-size: 3vw;
+      font-weight: 300;
+    }
+    .template-user-details-cont {
+      margin-left: 10px;
+    }
+    .template-img-cont {
+      width: 20%;
     }
   }

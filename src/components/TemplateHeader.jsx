@@ -24,23 +24,42 @@ const TemplateHeader = (props) => {
             </div>
           )}
           <div className="template-user-details-cont">
+         
             <h2
               style={{ color: props.primaryColor }}
               className="template-user-name">
               {props.personalInfo.firstName + " " + props.personalInfo.lastName}
             </h2>
             <p
+          style={{ color: props.primaryColor }}
+          className="email"
+          >
+          {props.personalInfo.email}
+        </p>
+     <p
               style={{ color: props.secondaryColor }}
               className="template-user-designation">
               {props.workExperience[0].jobTitle}
             </p>
           </div>
         </div>
+        <div>
+        <p 
+        style={{ color: props.primaryColor }}
+        className="template-header-second"> {props.personalInfo.city}</p>
         <p
           style={{ color: props.primaryColor }}
           className="template-header-second">
           {props.personalInfo.address}
         </p>
+       
+      <p
+          style={{ color: props.primaryColor }}
+          className="template-header-second">
+          MO:{props.personalInfo.mobile}
+        </p>
+      </div>
+      
       </div>
       <p
         style={{ color: props.secondaryColor }}

@@ -39,17 +39,19 @@ const Home = (props) => {
           <p className="template-select-text">Select a template to get started</p>
           
           <Stack
+          className="stack"
             sx={{
               width: "100%",
               display: "grid",
               alignContent:"center",
-              gridTemplateColumns: {
+             
+            gridTemplateColumns: {
                 sm: "1fr 1fr",
                 md: "1fr 1fr ",
-                lg: "1fr 1fr 1fr",
+                lg: "1fr 1fr 1fr 1fr",
                 xl: "1fr 1fr 1fr 1fr",
               },
-              gridGap: "40px",
+              gridGap: "20px",
              
             }}>
               

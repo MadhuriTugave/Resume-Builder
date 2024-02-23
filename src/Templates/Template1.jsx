@@ -30,18 +30,18 @@ const Template1 = (props) => {
     <Paper
       sx={{
         width: {
-          xs: "350px",
+          xs: "300px",
           sm: "400px",
           md: "450px",
           lg: "500px",
           xl: "550px",
         },
         height: {
-          xs: "500px",
-          sm: "550px",
-          md: "600px",
-          lg: "650px",
-          xl: "700px",
+          // xs: "500px",
+          // sm: "550px",
+          // md: "600px",
+          // lg: "650px",
+          // xl: "700px",
         },
       }}
       id={`${props.index}report`}

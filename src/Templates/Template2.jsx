@@ -37,13 +37,13 @@ const Template2 = (props) => {
           lg: "500px",
           xl: "550px",
         },
-        height: {
-          xs: "500px",
-          sm: "550px",
-          md: "600px",
-          lg: "650px",
-          xl: "700px",
-        },
+        // height: {
+        //   xs: "500px",
+        //   sm: "550px",
+        //   md: "600px",
+        //   lg: "650px",
+        //   xl: "700px",
+        // },
       }}
       id={`${props.index}report`}
       elevation={3}>

@@ -11,6 +11,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const CheckSelectedId = (props) => {
+  console.log(props);
   const selectedId = props.selectedTemplateId;
   return selectedId ? props.children : <Navigate to={"/"} />;
 };

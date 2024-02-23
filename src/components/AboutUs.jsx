@@ -46,24 +46,15 @@ function About() {
               textAlign: "justify",
               padding:"10px"
             }}>
-            Welcome to our resume builder! We are a team of experienced professionals dedicated to helping job seekers create resumes and cover letters that stand out from the competition. Our mission is to provide you with the tools and resources you need to land your dream job.
+           <h2> Welcome to our resume builder!</h2>
+           We are a team of experienced professionals dedicated to helping job seekers create resumes and cover letters that stand out from the competition. Our mission is to provide you with the tools and resources you need to land your dream job.
 
             We understand that the job search can be overwhelming, which is why we're here to guide you every step of the way. Our easy-to-use platform offers a variety of customizable templates and industry-specific keywords to help you craft a resume that showcases your unique skills and accomplishments.
 
             At our resume builder, we're committed to providing you with a high-quality, affordable solution to your job search needs. 
                 <br></br>
             Thank you for choosing our resume builder. We look forward to helping you achieve your career goals!
-            
-          </Typography>
-          <Stack>
-            <img className="about-img"
-              src={image}
-              alt="img"
-            
-            />
-          </Stack>
-        </Stack>
-        <Box mt={0}>
+            <Box mt={0}>
           <Typography
             sx={{
               fontSize: {
@@ -101,6 +92,16 @@ function About() {
              
           </Box>
         </Box>
+          </Typography>
+          <Stack>
+            <img className="about-img"
+              src={image}
+              alt="img"
+            
+            />
+          </Stack>
+        </Stack>
+        
        </Stack>
      
     

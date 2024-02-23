@@ -1,6 +1,7 @@
-import templateOneImg from "../images/Madhuri2.jpg";
-import templateTwoImg from "../images/Riya1.jpg";
-import templateThreeImg from "../images/Varsha.jpg";
+import templateOneImg from "../images/Madhuri2.png";
+import templateTwoImg from "../images/Riya1.png";
+import templateThreeImg from "../images/1.png";
+import templateForthImg from  "../images/Varsha1.png";
 import Template1 from "../Templates/Template1";
 import Template2 from "../Templates/Template2";
 import Template3 from "../Templates/Template3"
@@ -21,6 +22,12 @@ export const templates = [
     id: 3,
     template_name: "Template Three",
     template_img: templateThreeImg,
+    template: <Template3 />,
+  },
+  {
+    id: 4,
+    template_name: "Template four",
+    template_img: templateForthImg,
     template: <Template3 />,
   },
 ];
