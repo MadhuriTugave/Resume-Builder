@@ -5,6 +5,7 @@ import templateForthImg from  "../images/Varsha1.png";
 import Template1 from "../Templates/Template1";
 import Template2 from "../Templates/Template2";
 import Template3 from "../Templates/Template3"
+import Template4 from "../Templates/Template4"
 export const templates = [
   {
     id: 1,
@@ -28,6 +29,6 @@ export const templates = [
     id: 4,
     template_name: "Template four",
     template_img: templateForthImg,
-    template: <Template3 />,
+    template: <Template4 />,
   },
 ];

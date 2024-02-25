@@ -51,13 +51,13 @@ const Home = (props) => {
                 lg: "1fr 1fr 1fr 1fr",
                 xl: "1fr 1fr 1fr 1fr",
               },
-              gridGap: "20px",
+              gridGap: "10px",
              
             }}>
               
             {templates.map((template) => {
               return (
-                <div key={template.id} id="template" className="templates-img-cont">
+                <div key={template.id} id="template" className="templates-img-cont scal">
                   
                   <img
                     className="template-img"

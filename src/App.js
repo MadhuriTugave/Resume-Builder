@@ -7,11 +7,18 @@ import AboutUs from "./components/AboutUs";
 import MyResumes from "./components/MyResumes";
 
 import Notfound from "./components/NotFound";
+import SignUpLoginPage from "./components/SignUpLoginPage";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
+    <>
+    <Toaster/>
   <Routes>
+   
+     <Route exact path="/SignUpLoginPage" element={<SignUpLoginPage/>}></Route>
         <Route exact path="/" element={<Home/>} />
+        
         <Route
           exact
           path="/template/fill-details"
@@ -23,10 +30,11 @@ const App = () => {
         />
        <Route exact path="/my/resumes" element={<MyResumes/>} />
        <Route exact path="/about-us" element={<AboutUs/>}/>
+      
         {/* If someone attempts to navigate to a page that does not exist, they will be redirected to a 404 page. */}
          <Route exact path="*" element={<Notfound />}/>
       </Routes>
-     
+      </>
   );
 };
 

@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { templates } from "../Data/templates";
 import JsPDF from "jspdf";
 import uniqid from "uniqid";
+import toast from "react-hot-toast";
 
 const mapStateToProps = (state) => ({
   selectedTemplateId: state.selectedTemplateReducer.selectedTemplateId,
@@ -45,7 +46,7 @@ const PreviewComponent = (props) => {
     } else {
       setError("");
       setLoading(true);
-      const report = new JsPDF("portrait", "pt", "a4");
+      const report = new JsPDF("portrait", "pt", "a4");// to converting dada to pdf.
       report
         .html(document.getElementById(`${props.selectedTemplateId - 1}report`))
         .then(() => {
@@ -93,8 +94,9 @@ const PreviewComponent = (props) => {
               educationInfo: props.educationInfo,
               skills: props.skills,
             });
-
+            toast.success("Resume successfully Downloaded !!")
             window.localStorage.setItem("resumes", JSON.stringify(newResumes));
+           
           } else {
             window.localStorage.setItem(
               "resumes",
