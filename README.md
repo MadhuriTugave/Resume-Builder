@@ -1,3 +1,113 @@
+AlmaBetter Frontend Capstone Project
+Resume-Builder
+Introducing Resume Builder, the ultimate React application that empowers you to craft eye-catching resumes like never before. You can easily customise your resume with Resume Builder's user-friendly interface to highlight your unique skills and professional experience.
+
+Stand out from the crowd and make a lasting impression with Resume Builder, the perfect tool to land your dream job. Start building your future today!
+
+Just select template - Fill in the details ! Your resume is ready to preview and download.
+
+Installation
+Clone this repository in your local machine and install the needed dependencies
+
+Type npm start in terminal to start the application after installing the dependencies using npm install <package_name>
+
+Technologies and Libraries used
+React
+React-router-dom
+React-hook-form
+Redux
+jspdf
+Material UI and Icons
+Application Folder Structure
+├── public/
+│	├── index.html
+│	├── robots.txt
+├──src/
+│	├──Components/
+│		├──AboutUs.jsx
+│		├──Home.jsx
+│		├──BackNextBtnComponent.jsx
+│		├──CheckSelectedId.jsx
+│		├──DetailsFilling.jsx
+│		├──DetailsFillingSideBar.jsx 
+│		├──EducationComponent.jsx
+|   ├──inputComponent.jsx
+│		├──KeySkillComponent.jsx
+│		├──PreviewComponent.jsx
+│		├──MyResumes.jsx
+│		├──Navbar.jsx
+|   ├──NotFound.jsx
+|   ├──PersonalInfoComponent.jsx
+│		├──SelectComponent.jsx
+│		├──SignLoginPage.jsx
+│		├──TemplateEducationComponent.jsx
+|   ├──TemplateHeader.jsx
+│		├──TemplateHeading.jsx
+│		├──TemplateOneExperienceComponent.jsx
+│		├──TempleteSkillComponent.jsx
+│		├──WorkExperienceComponent.jsx
+│	├──Data/
+│		├──data.js
+│		├──templates.js
+| ├──Images/
+│		├──1.png
+│		├──Madhuri2.png
+│		├──resume.jpg
+│		├──Riya.png
+│		├──Varsha1.png
+│	├──Redux/
+│		├──actions.js
+│		├──actionType.js
+│		├──reducers.js
+│		├──store.js
+│	├──styles/
+│		├──about.css
+│		├──Home.css
+│		├──BackNextBtnComponent.css
+│		├──DetailsFilling.css
+│		├──DetailsFillingSideBar.css 
+│		├──EducationComponent.css
+|   ├──inputComponent.css
+│		├──KeySkillComponent.css
+│		├──PreviewComponent.css
+│		├──MyResumes.css
+│		├──navbar.css
+|   ├──PersonalInfoComponent.css
+│		├──SelectComponent.css
+│		├──SignLoginPage.css
+│		├──Template1.css
+│		├──Template2.css
+│		├──TemplateEducationComponent.css
+|   ├──TemplateHeader.css
+│		├──TemplateHeading.css
+│		├──TemplateOneExperienceComponent.css
+│		├──TempleteSkillComponent.jsx
+│		├──WorkExperienceComponent.jsx
+│	├──Templetes/
+│		├──Resume1.jsx
+│		├──Resume2.jsx
+│		├──Resume3.jsx
+│		├──Resume4.jsx
+│	├──Utils/
+│		├──inputChecks.js
+│	├──App.js
+│	├──App.css
+│	├──App.test.js
+│	├──index.css
+│	├──index.js
+│	├──setupTests.js
+├──package-lock.json
+├──package.json
+└──.gitignore
+└──README.md
+
+Links for the project
+Deployment Link : 
+
+Team Memebers
+Madhuri Dalve
+Riya Rawal
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
