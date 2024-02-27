@@ -46,7 +46,7 @@ function Navbar(props) {
             paddingLeft: "20px",
             flexDirection: "column",
           }}>
-          <NavLink className="nav-link" to="/" color="inherit">
+          <NavLink className="nav-link" to="/Home" color="inherit">
             Resume Templates
           </NavLink>
           <NavLink to="/my/resumes" className="nav-link" color="inherit">
