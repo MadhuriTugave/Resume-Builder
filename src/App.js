@@ -16,11 +16,9 @@ const App = () => {
     <Toaster/>
   <Routes>
    
-<<<<<<< HEAD
-     <Route exact path="/" element={<SignUpLoginPage/>}></Route>
-=======
+
      <Route exact path="/" element={<SignupLoginPage/>}></Route>
->>>>>>> 2c91e33c710d43658dafd63014bf5cf101e5819a
+
         <Route exact path="/Home" element={<Home/>} />
         
         <Route
