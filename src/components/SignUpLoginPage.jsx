@@ -13,14 +13,17 @@ function SignUpLoginPage() {
    
     const  handleSubmit =(e)=> {
         e.preventDefault();
-
         if (userName && password) {
-     console.log(toast);
-          toast.success('Successfully !!!!');
-          navigate("/");
+    
+          toast.success('Successfull !!!!');
+          setTimeout(() => {
+            navigate("/Home");
+          }, 500);
+        
          } else {
           toast.error("please fill all the fields");
         }
+        
       };
   return (
 <div className="firstdiv">
@@ -30,11 +33,12 @@ function SignUpLoginPage() {
       >
         <input
           type="text"
+          placeholder="UserName..."
           value={userName}
           onChange={(e) => {
             setUserName(e.target.value);
           }}
-          placeholder="UserName"
+        
           className="block w-full p-2 mb-2 rounded-sm "
         />
         <input
@@ -43,7 +47,7 @@ function SignUpLoginPage() {
           onChange={(e) => {
             setPassword(e.target.value);
           }}
-          placeholder="Password"
+          placeholder="Password..."
           className="block w-full p-2 mb-2 rounded-sm"
         />
         <button className="bg-blue-500 p-2 w-full rounded-lg text-white block ">

@@ -16,8 +16,8 @@ const App = () => {
     <Toaster/>
   <Routes>
    
-     <Route exact path="/SignUpLoginPage" element={<SignUpLoginPage/>}></Route>
-        <Route exact path="/" element={<Home/>} />
+     <Route exact path="/" element={<SignUpLoginPage/>}></Route>
+        <Route exact path="/Home" element={<Home/>} />
         
         <Route
           exact
