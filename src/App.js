@@ -7,7 +7,7 @@ import AboutUs from "./components/AboutUs";
 import MyResumes from "./components/MyResumes";
 
 import Notfound from "./components/NotFound";
-import SignUpLoginPage from "./components/SignUpLoginPage";
+import SignupLoginPage from "./components/SignUpLoginPage";
 import { Toaster } from "react-hot-toast";
 
 const App = () => {
@@ -16,8 +16,8 @@ const App = () => {
     <Toaster/>
   <Routes>
    
-     <Route exact path="/SignUpLoginPage" element={<SignUpLoginPage/>}></Route>
-        <Route exact path="/" element={<Home/>} />
+     <Route exact path="/" element={<SignupLoginPage/>}></Route>
+        <Route exact path="/Home" element={<Home/>} />
         
         <Route
           exact

@@ -1,88 +1,86 @@
-import React from 'react';
-import  { useState } from "react";
-import"../styles/SignUpLoginPage.css";
+
+import React, { useState } from "react";
+import {Box, Button, TextField, Typography} from  "@mui/material";
+import"../styles/SignupLoginPage.css";
+import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+  
+    
+const SignupLoginPage = () => {
+  const [isSignup, setIsSignup]=useState(false);
+  const [input, setInput]=useState({
+    name:"",
+    email:"",
+    password:""
+  });
 
-function SignUpLoginPage() {
-    const [userName, setUserName] = useState("");
-    const [password, setPassword] = useState("");
-    const [isLoginOrRegister, setisLoginOrRegister] = useState("Login");
-   
-    const navigate = useNavigate();
-   
-    const  handleSubmit =(e)=> {
-        e.preventDefault();
 
-        if (userName && password) {
-     console.log(toast);
-          toast.success('Successfully !!!!');
-          navigate("/");
-         } else {
-          toast.error("please fill all the fields");
-        }
-      };
-  return (
-<div className="firstdiv">
-      <form
-        className="form"
-        onSubmit={handleSubmit}
-      >
-        <input
-          type="text"
-          value={userName}
-          onChange={(e) => {
-            setUserName(e.target.value);
-          }}
-          placeholder="UserName"
-          className="block w-full p-2 mb-2 rounded-sm "
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          placeholder="Password"
-          className="block w-full p-2 mb-2 rounded-sm"
-        />
-        <button className="bg-blue-500 p-2 w-full rounded-lg text-white block ">
-          {isLoginOrRegister === "register" ? "Register" : "Login"}
-        
-        </button>
-        <div className="text-center mt-2">
-          {isLoginOrRegister === "register" && (
-            <div className="text-lg ">
-              Already have account?{" "}
-              <button 
-              // target="/Login"
-                onClick={() => {
-                  setisLoginOrRegister("Login");
-                 }}
-                className="text-red-500 underline"
-              >
-               Login
-              </button>
-            </div>
-          )}
-          {isLoginOrRegister === "Login" && (
-            <div className="text-lg ">
-              Dont have account?{" "}
-              <button 
-              
-                onClick={() => {
-                  setisLoginOrRegister("register");
-                }}
-                className="text-red-500 underline"
-              >
-                Register
-              </button>
-            </div>
-          )}
-        </div>
-      </form>
-    </div>
+
+  const navigate = useNavigate();
+ 
+  const handleChange=(e)=>{
+    setInput((prevState)=>({
+      ...prevState,
+      [e.target.name]:e.target.value
+    }));
+   
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(input);
+    const { name, email, password } = input;
+    if (isSignup && name && email && password) {
+      console.log(toast);
+      toast.success("Successfully signed up!");
+      navigate("/Home");
+    } else if (!isSignup && email && password) {
+      console.log(toast);
+      toast.success("Successfully logged in!");
+      navigate("/Home");
+    } else {
+      toast.error("Please fill all the fields");
+    }
+  };
+
+ const resetState=()=>{
+  setIsSignup(!isSignup);
+  setInput({name:"",email:"",password:""})
+ }
+  return(
+  <div>
+  <form onSubmit={handleSubmit}>
+  <Box
+   display="flex"
+   flexDirection={"column"}
+   maxWidth={400}
+   alignItems="center"
+   justifyContent={"center"}
+   margin="auto"
+   marginTop ={5}
+   padding={3}
+
+   borderRadius={5}
+  //  borderShadow={"6px 6px 10px #ccc"}
+   sx={{
+    ":hover": {
+   boxShadow:'10px 10px 25px #ccc',
+    },
+  }}
+   >
+  <Typography variant="h2"padding ={3} textAlign="center">{isSignup ? "SignUp" : "Login"}</Typography>
+ {isSignup && <TextField onChange={handleChange} name="name" value={input.name} margin="normal" type = {'text'} variant="outlined" placeholder="Name"/>}
+  <TextField onChange={handleChange} name="email" value={input.email} margin="normal" type={"email"} variant="outlined" placeholder="Email"/>
+  <TextField onChange={handleChange} name="password" value={input.password} margin="normal" type ={'password'}variant="outlined" placeholder="Password"/>
+  <Button  endIcon={isSignup ? <HowToRegIcon/> :<LoginOutlinedIcon/>} type="submit" sx={{marginTop:3, borderRadius:3}} variant="contained" color="warning" >{isSignup ? "SignUp":"Login"}</Button>
+  <Button  endIcon={isSignup ?  <LoginOutlinedIcon/> : <HowToRegIcon/>} onClick={resetState} sx={{marginTop:3, borderRadius:3}}  >Change To {isSignup ? "Login":"SignUp" }</Button>
+  </Box> 
+  </form>
+  </div>
   )
 }
 
-export default SignUpLoginPage
+
+export default SignupLoginPage;

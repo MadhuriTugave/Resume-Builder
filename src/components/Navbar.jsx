@@ -25,7 +25,7 @@ function Navbar(props) {
     const drawer = (
       <Box onClick={handleDrawerToggle}  sx={{ textAlign: "center" }}>
         <Typography variant="h6" sx={{ my: 2 }}>
-          <NavLink to="/" className="nav-link">
+          <NavLink to="/Home" className="nav-link">
             {" "}
             Resume Builder
           </NavLink>
@@ -39,7 +39,7 @@ function Navbar(props) {
             paddingLeft: "20px",
             flexDirection: "column",
           }}>
-          <NavLink className="nav-link" to="/" color="inherit">
+          <NavLink className="nav-link" to="/Home" color="inherit">
             Resume Templates
           </NavLink>
           <NavLink to="/my/resumes" className="nav-link" color="inherit">
@@ -80,7 +80,7 @@ function Navbar(props) {
                   top: "7px",
                  
                 }}>
-                <NavLink to="/"  className="nav-link">
+                <NavLink to="/Home"  className="nav-link">
                   {" "}
                  
                 <h2>Resume Builder</h2>
@@ -88,7 +88,7 @@ function Navbar(props) {
                 </NavLink>
               </Typography>
               <Box sx={{ display: { xs: "none", sm: "block" } }}>
-                <NavLink to="/" className="nav-link" color="inherit">
+                <NavLink to="/Home" className="nav-link" color="inherit">
                   ResumeTemplates
                 </NavLink>
                 <NavLink to="/my/resumes" className="nav-link" color="inherit">
