@@ -18,6 +18,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const years = [
+  "2023",
   "2022",
   "2021",
   "2020",
@@ -27,7 +28,7 @@ const years = [
   "2016",
   "2015",
   "2014",
-  "2013",
+  
 ];
 
 const WorkExperienceComponent = (props) => {

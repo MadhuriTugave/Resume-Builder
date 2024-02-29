@@ -20,7 +20,8 @@ import {
   selectResume,
   selectTemplate,
 } from "../Redux/actions";
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -80,7 +81,7 @@ const MyResumes = (props) => {
     const newSetOfResumes = newResumes.filter((eachResume) => {
       return eachResume.id !== resume.id;
     });
-
+   toast.success("Resume Deleted ");
     window.localStorage.setItem("resumes", JSON.stringify(newSetOfResumes));
     setResumes(newSetOfResumes);
   };
@@ -91,6 +92,7 @@ const MyResumes = (props) => {
     report.html(document.getElementById(`${id}report`)).then(() => {
       report.save(`resume.pdf`);
       // // console.log(resumes)
+     toast.success("Resume Downlloaded !!!")
     });
   };
 

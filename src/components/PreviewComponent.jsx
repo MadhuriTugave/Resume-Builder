@@ -7,6 +7,7 @@ import JsPDF from "jspdf";
 import uniqid from "uniqid";
 import toast from "react-hot-toast";
 
+
 const mapStateToProps = (state) => ({
   selectedTemplateId: state.selectedTemplateReducer.selectedTemplateId,
   selectedResumeId: state.selectedTemplateReducer.selectedResumeId,
@@ -80,9 +81,10 @@ const PreviewComponent = (props) => {
                 "resumes",
                 JSON.stringify(allNewResumes)
               );
-
-              window.location.reload();
-
+      // console.log(window.location.assign("/my/resumes"));
+      window.location.assign("/my/resumes")
+            
+        
               return;
             }
 
@@ -95,6 +97,7 @@ const PreviewComponent = (props) => {
               skills: props.skills,
             });
             toast.success("Resume successfully Downloaded !!")
+          
             window.localStorage.setItem("resumes", JSON.stringify(newResumes));
            
           } else {
@@ -112,9 +115,10 @@ const PreviewComponent = (props) => {
               ])
             );
           }
-
+         
           //Redirect user to the myResumes page
-          window.location.reload();
+        
+          window.location.assign("/my/resumes")
         })
         .catch((error) => console.log(error.message));
     }

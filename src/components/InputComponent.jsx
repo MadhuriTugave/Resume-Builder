@@ -4,6 +4,7 @@ import "../styles/InputComponent.css";
 import { inputChecks } from "../Utils/inputChecks";
 
 const InputComponent = (props) => {
+  // console.log(props);
   return (
     <div className="input-component">
       <p className="input-title">{props.title}</p>
