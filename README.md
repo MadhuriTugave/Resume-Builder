@@ -20,7 +20,7 @@ Type npm start in terminal to start the application after installing the depende
 ### jspdf
 ### Material UI and Icons
 
-# Links for the project
+# Link for the project
 ## Deployment Link : [ https://resume-builde.netlify.app/ ] 
 
 ## Collaborators
