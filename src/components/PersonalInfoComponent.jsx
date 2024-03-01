@@ -35,8 +35,8 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 const PersonalInfoComponent = (props) => {
   const [loading, setLoading] = useState(false);
   const [imgSnackbar, setImgSnackbar] = useState(false);
-  const [vertical, setVertical] = useState("top");
-  const [horizontal, setHorizontal] = useState("center");
+  const horizontal="center";
+  const vertical ="top";
 
   const {
     register,
@@ -105,6 +105,7 @@ const PersonalInfoComponent = (props) => {
   };
 
   const saveImage = () => {
+   
     setSotreImage([{ img }]);
     // props.onSetProfileImage(img);
     setOpen(false);
@@ -137,8 +138,8 @@ const PersonalInfoComponent = (props) => {
     };
   }, []);
 
-  // const profileImg = sotreImage.map((ele) => ele.img);
-  // console.log(props.personalInfo, errors);
+ sotreImage.map((ele) => ele.img);
+ 
 
   return (
     <Paper className="personal-info-paper" elevation={3}>
