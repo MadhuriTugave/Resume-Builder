@@ -23,7 +23,7 @@ Type npm start in terminal to start the application after installing the depende
 # Links for the project
 ## Deployment Link : [ https://resume-builde.netlify.app/ ] 
 
-## Team Memebers
+## Collaborators
 ### Madhuri Dalve
 ### Riya Rawal
 # Getting Started with Create React App
