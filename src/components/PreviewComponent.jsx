@@ -81,9 +81,10 @@ const PreviewComponent = (props) => {
                 "resumes",
                 JSON.stringify(allNewResumes)
               );
-      // console.log(window.location.assign("/my/resumes"));
-      window.location.assign("/my/resumes")
-            
+    
+       window.location.assign("/my/resumes")
+     
+     
         
               return;
             }
@@ -99,6 +100,7 @@ const PreviewComponent = (props) => {
             toast.success("Resume successfully Downloaded !!")
           
             window.localStorage.setItem("resumes", JSON.stringify(newResumes));
+          
            
           } else {
             window.localStorage.setItem(
@@ -119,6 +121,7 @@ const PreviewComponent = (props) => {
           //Redirect user to the myResumes page
         
           window.location.assign("/my/resumes")
+          
         })
         .catch((error) => console.log(error.message));
     }
